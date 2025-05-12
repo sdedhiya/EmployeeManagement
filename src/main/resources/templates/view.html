@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Employee</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="header">User Management App</div>
+<h2 style="text-align:center;">Employee Details</h2>
+<div class="form-container">
+    <p><strong>First Name:</strong> <span th:text="${employee.firstName}"></span></p>
+    <p><strong>Last Name:</strong> <span th:text="${employee.lastName}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${employee.email}"></span></p>
+    <a href="/"><button>Back</button></a>
+</div>
+</body>
+</html>

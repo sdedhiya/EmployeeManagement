@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Employee</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h2 class="mt-4 mb-4">Employee Details</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>First Name:</th>
+            <td th:text="${employee.firstName}"></td>
+        </tr>
+        <tr>
+            <th>Last Name:</th>
+            <td th:text="${employee.lastName}"></td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td th:text="${employee.email}"></td>
+        </tr>
+    </table>
+    <a th:href="@{/employees}" class="btn btn-primary">Back to List</a>
+</div>
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

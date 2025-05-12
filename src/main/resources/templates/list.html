@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="header">User Management App</div>
+<h2 style="text-align:center;">Users List</h2>
+<div class="btn-container">
+    <a href="/add"><button class="add-btn">Add User</button></a>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>User First Name</th>
+        <th>User Last Name</th>
+        <th>User Email Id</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.firstName}">First</td>
+        <td th:text="${employee.lastName}">Last</td>
+        <td th:text="${employee.email}">Email</td>
+        <td>
+            <a th:href="@{/edit/{id}(id=${employee.id})}"><button class="update-btn">Update</button></a>
+            <a th:href="@{/delete/{id}(id=${employee.id})}"><button class="delete-btn">Delete</button></a>
+            <a th:href="@{/view/{id}(id=${employee.id})}"><button class="view-btn">View</button></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
